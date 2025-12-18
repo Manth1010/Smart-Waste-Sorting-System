@@ -461,7 +461,7 @@ def retrain_model():
             sys.executable, str(script_path)
         ], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-        # For now, return immediately (could implement async handling)
+        # For now, return immediately (could implement async  handling)
         return jsonify({
             'message': 'Retraining started',
             'process_id': process.pid,
