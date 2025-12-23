@@ -497,7 +497,7 @@ if __name__ == '__main__':
     url = f'http://localhost:{config.API_PORT}'
     webbrowser.open(url)
 
-    # Run the app
+    # Run  the app
     app.run(
         host=config.API_HOST,
         port=config.API_PORT,
