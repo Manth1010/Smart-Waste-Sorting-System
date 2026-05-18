@@ -1,10 +1,10 @@
-# ♻️ Smart Waste Sorting System
+# Smart Waste Sorting System
 
 An AI-powered smart waste sorting system that uses computer vision and deep learning to automatically detect, classify, and sort waste into appropriate categories with real-time prediction, feedback learning, and automated retraining.
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 Waste segregation is one of the major challenges in modern waste management. Manual sorting is inefficient, time-consuming, and error-prone.
 
@@ -12,7 +12,7 @@ This project provides an intelligent waste classification system that identifies
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 - Real-time waste detection and classification
 - Image upload-based waste prediction
@@ -29,7 +29,7 @@ This project provides an intelligent waste classification system that identifies
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### Backend
 - Python
@@ -55,7 +55,7 @@ This project provides an intelligent waste classification system that identifies
 
 ---
 
-## 🏗 System Architecture
+## System Architecture
 
 ```text
 Frontend Interface
@@ -83,7 +83,7 @@ Updated Model Deployment
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```bash
 Smart-Waste-Sorting-System/
