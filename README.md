@@ -1,31 +1,33 @@
 # Smart Waste Sorting System
 
-An AI-powered smart waste sorting system that uses computer vision and deep learning to automatically detect, classify, and sort waste into appropriate categories with real-time prediction, feedback learning, and automated retraining.
+An AI-powered smart waste sorting system built using YOLOv8 and Flask that automatically detects, classifies, and sorts waste materials with real-time prediction, intelligent feedback learning, and automated model retraining.
 
 ---
 
 ## Project Overview
 
-Waste segregation is one of the major challenges in modern waste management. Manual sorting is inefficient, time-consuming, and error-prone.
+Waste segregation is a major challenge in modern waste management systems. Manual sorting is inefficient, slow, and prone to human error.
 
-This project provides an intelligent waste classification system that identifies waste materials using computer vision and deep learning, classifies them into categories (organic/inorganic), and supports continuous improvement through user feedback and automated retraining.
+This project solves that problem using computer vision and deep learning by automatically identifying waste items, classifying them into appropriate categories, and continuously improving model performance through a feedback-driven retraining pipeline.
 
 ---
 
 ## Key Features
 
-- Real-time waste detection and classification
-- Image upload-based waste prediction
+- Real-time waste object detection using YOLOv8
+- Image upload-based prediction
 - Base64 image prediction support
 - Batch prediction for multiple images
-- Sorting decision engine (automatic/manual review)
-- Confidence-based decision making
-- Feedback correction system for model improvement
-- Automated retraining pipeline
-- Model reload after retraining
+- Real-time video frame prediction
+- Automatic waste category classification
+- Confidence-based sorting decision engine
+- Manual review fallback for uncertain predictions
+- User feedback correction mechanism
+- Automated model retraining pipeline
+- Dynamic model reloading
 - REST API architecture
 - Health monitoring endpoints
-- Model information endpoint
+- Feedback analytics support
 
 ---
 
@@ -36,54 +38,57 @@ This project provides an intelligent waste classification system that identifies
 - Flask
 - Flask-CORS
 
-### Computer Vision / AI
-- YOLO (Object Detection)
+### AI / Computer Vision
+- YOLOv8
 - OpenCV
 - NumPy
-- PIL
+- PIL (Pillow)
 
-### ML Workflow
+### Machine Learning Workflow
 - Feedback Learning
 - Automated Retraining
 - Real-Time Inference
 
 ### Utilities
 - Logging
-- JSON
-- Base64 Processing
+- JSON Processing
+- Base64 Image Handling
 - Pathlib
 
 ---
 
-## System Architecture
+## 🏗 System Architecture
 
 ```text
-Frontend Interface
-      ↓
-Flask REST API
-      ↓
-Image Processing Layer
-      ↓
-YOLO Detection Model
-      ↓
+User Interface / Camera Input
+           ↓
+Flask REST API Layer
+           ↓
+Image Preprocessing
+           ↓
+YOLOv8 Detection Model
+           ↓
 Waste Classification
-      ↓
+           ↓
+Category Mapping
+(Organic / Inorganic)
+           ↓
 Sorting Decision Engine
-      ↓
-Auto Sort / Manual Review
-      ↓
+           ↓
+Auto Sorting / Manual Review
+           ↓
 Feedback Collection
-      ↓
+           ↓
 Feedback Storage
-      ↓
-Model Retraining Pipeline
-      ↓
+           ↓
+Retraining Pipeline
+           ↓
 Updated Model Deployment
 ```
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
 ```bash
 Smart-Waste-Sorting-System/
@@ -93,8 +98,8 @@ Smart-Waste-Sorting-System/
 │
 ├── src/
 │   ├── config.py
-│   ├── yolov7_wrapper.py
-│   └── feedback_manager.py
+│   ├── yolov8_wrapper.py
+│   ├── feedback_manager.py
 │
 ├── templates/
 │   └── index.html
@@ -111,19 +116,19 @@ Smart-Waste-Sorting-System/
 ## API Endpoints
 
 | Endpoint | Method | Purpose |
-|--------|--------|---------|
+|---------|--------|---------|
 | `/` | GET | Main UI |
-| `/health` | GET | Health check |
-| `/predict` | POST | Predict from uploaded image |
-| `/predict_base64` | POST | Predict from base64 image |
-| `/batch_predict` | POST | Batch image prediction |
+| `/health` | GET | Application health check |
+| `/predict` | POST | Predict waste class from uploaded image |
+| `/predict_base64` | POST | Predict using base64 image |
+| `/batch_predict` | POST | Predict multiple images |
 | `/predict_realtime` | POST | Real-time frame prediction |
-| `/sorting_decision` | POST | Sorting action decision |
-| `/feedback` | POST | Submit correction feedback |
-| `/feedback_stats` | GET | Feedback statistics |
+| `/sorting_decision` | POST | Sorting action logic |
+| `/feedback` | POST | Submit corrected feedback |
+| `/feedback_stats` | GET | Feedback analytics |
 | `/retrain` | POST | Trigger retraining |
 | `/reload_model` | POST | Reload updated model |
-| `/model_info` | GET | Model metadata |
+| `/model_info` | GET | Model details |
 
 ---
 
@@ -131,7 +136,7 @@ Smart-Waste-Sorting-System/
 
 ### Clone Repository
 ```bash
-git clone https://github.com/yourusername/Smart-Waste-Sorting-System.git
+git clone https://github.com/Manth1010/Smart-Waste-Sorting-System.git
 cd Smart-Waste-Sorting-System
 ```
 
@@ -149,40 +154,40 @@ python api/app.py
 
 ## Example Use Cases
 
-- Smart waste segregation systems
-- Recycling plants
-- Industrial waste management
-- AI-based sorting automation
-- Computer vision experimentation
-- Real-time object classification systems
+- Smart recycling systems
+- Industrial waste segregation
+- AI-powered smart bins
+- Recycling plant automation
+- Computer vision object classification
+- Intelligent waste monitoring
 
 ---
 
-## Future Improvements
+## Future Enhancements
 
 - IoT hardware integration
 - Conveyor belt automation
-- Smart bin deployment
+- Robotic waste sorting
 - Cloud deployment
-- Dashboard analytics
-- Multi-class advanced waste categorization
+- Analytics dashboard
+- Multi-category waste classification
 - Performance optimization
 
 ---
 
-## Project Highlights
+## Skills Demonstrated
 
-This project demonstrates:
+This project showcases:
 
-- Computer Vision Engineering
-- Deep Learning Deployment
-- REST API Development
-- Feedback Loop ML Systems
-- Production-style AI Architecture
-- Model Lifecycle Management
+- Computer Vision
+- Deep Learning
+- YOLOv8 Object Detection
+- Flask API Development
+- REST Architecture
+- Real-Time AI Inference
+- Model Retraining Pipelines
+- Feedback Learning Systems
+- Production-style AI Deployment
 
 ---
 
-## Author
-
-Developed by **Manth Patel**
