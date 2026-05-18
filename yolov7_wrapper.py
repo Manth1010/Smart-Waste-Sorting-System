@@ -10,7 +10,7 @@ from ultralytics import YOLO
 from config import Config
 
 
-class YOLOv7Detector:
+class YOLOv8Detector:
     """YOLO-based detector using ultralytics engine for inference.
 
     - If models/yolov7_custom.pt exists (your trained weights), it will be used.
